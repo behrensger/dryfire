@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script type="text/javascript" src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script type="text/javascript" src="js/code.js"></script>
+  <title>Simple IPSC Calculator</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <ons-page>
+    <ons-toolbar>
+      <div class="center">Dry Fire Trainer</div>
+      <div class="toolbar__right">
+        <span id="help" class="toolbar-button toolbar-button--outline">?</span>
+      </div>
+    </ons-toolbar>
+    <ons-list>
+      <ons-list-header>Delay</ons-list-header>
+
+
+      <ons-list-item modifier="nodivider">
+        <ons-row>
+          <ons-col><label>Prepare Delay</label></ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col>
+            <ons-range id="rn_prep" style="width: 100%;" min="0" max="10" step="0.1" value="2"></ons-range>
+          </ons-col>
+          <ons-col width="100px" style="text-align: center; line-height: 31px;"><label id="lb_prep">3,5 sec</label>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <ons-row>
+          <ons-col><label>Fluke Delay</label></ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col>
+            <ons-range id="rn_fluke" style="width: 100%;" min="2" max="5" step="0.1" value="3.5"></ons-range>
+          </ons-col>
+          <ons-col width="100px" style="text-align: center; line-height: 31px;"><label id="lb_fluke">3,5 sec</label>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-header>Drill Settings</ons-list-header>
+
+      <ons-list-item modifier="nodivider">
+        <ons-row>
+          <ons-col><label>Repetitions</label></ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col>
+            <ons-range id="rn_reps" style="width: 100%;" min="1" max="100" step="1" value="50"></ons-range>
+          </ons-col>
+          <ons-col width="100px" style="text-align: center; line-height: 31px;"><label id="lb_reps">50x</label>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <ons-row>
+          <ons-col><label>Drill Time</label></ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col>
+            <ons-range id="rn_exe" style="width: 100%;" min="0.2" max="10" step="0.1" value="1"></ons-range>
+          </ons-col>
+          <ons-col width="100px" style="text-align: center; line-height: 31px;"><label id="lb_exe">3,5 sec</label>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-header>Execution</ons-list-header>
+      <ons-list-item modifier="nodivider">
+      </ons-list-item>
+
+      <ons-list-item modifier="nodivider">
+        <ons-row>
+          <ons-col>
+            <ons-button id="bnt_start">
+              <ons-icon id="icn_start" style="padding: 0.2em " size="40px" icon="md-play-circle" />
+            </ons-button>
+          </ons-col>
+          <ons-col width="60%">
+            <ons-row>
+              <ons-col>
+                <ons-progress-bar id="bar_prog" value="0" secondary-value="100" />
+              </ons-col>
+            </ons-row>
+            <ons-row>
+              <ons-col>
+                <p id="lb_prog">Progress: 0 Reps</p>
+              </ons-col>
+            </ons-row>
+          </ons-col>
+          <ons-col>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <p id="status"></p>
+      </ons-list-item>
+    </ons-list>
+  </ons-page>
+</body>
+
+</html>
